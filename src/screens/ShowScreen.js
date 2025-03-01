@@ -13,7 +13,6 @@ const ShowScreen = ({navigation}) => {
 
     return <View>
         <Text>{BlogPost.title}</Text>
-        {/* something wrong here it does not show content */}
         <Text>{BlogPost.content}</Text>
     </View>
 };

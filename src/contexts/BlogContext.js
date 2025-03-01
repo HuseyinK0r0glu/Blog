@@ -35,11 +35,13 @@ const getBlogPosts = (dispatch) => {
 const addBlogPost = (dispatch) => {
     return async (title,content,callback) => {
 
-        await jsonServer.post('/blogposts',{title , content})
+        await jsonServer.post('/blogposts',{title , content});
         if(callback){
             callback();
         } 
 
+        // we were creating the id but now jsonserver is creating the id
+        // we dont need to call add_blogpost because jsonserver will create the id and post that blog post after calling the callback function we will go to indexScreen and there getBlogPosts will be called and our local state will be updated 
         {/* 
             dispatch({type : 'add_blogpost' , payload : {title,content}});
             if(callback){
