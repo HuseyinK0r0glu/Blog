@@ -19,9 +19,7 @@ cd Blog
 ```
 2️⃣ Install Dependencies 
 
-npm install
-# or
-yarn install
+npm install or yarn install
 
 3️⃣ Start the Development Server 
 
