@@ -26,7 +26,7 @@ const blogReducer = (state,action) => {
 const getBlogPosts = (dispatch) => {
     return async () => {
         const response = await jsonServer.get('/blogposts');
-        /// response.date === [{},{},{}]
+        /// response.data === [{},{},{}]
         dispatch({type : 'get_blogposts' , payload : response.data})
     };
 };
